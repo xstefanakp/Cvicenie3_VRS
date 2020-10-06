@@ -11,6 +11,12 @@ c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externalt
 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-memset.o)
                               c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
 
+Allocating common symbols
+Common symbol       size              file
+
+previous_state      0x1               Src/main.o
+state               0x1               Src/main.o
+
 Discarded input sections
 
  .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
@@ -161,11 +167,16 @@ Discarded input sections
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
  .text          0x0000000000000000        0x0 Src/main.o
  .data          0x0000000000000000        0x0 Src/main.o
  .bss           0x0000000000000000        0x0 Src/main.o
  .rodata.CHANNEL_OFFSET_TAB
                 0x0000000000000000        0x7 Src/main.o
+ .bss.sample_counter
+                0x0000000000000000        0x1 Src/main.o
+ .text.edgeDetect
+                0x0000000000000000       0xc0 Src/main.o
  .text.Error_Handler
                 0x0000000000000000        0xe Src/main.o
  .debug_macro   0x0000000000000000      0xa54 Src/main.o
@@ -186,6 +197,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000      0x2a5 Src/main.o
  .debug_macro   0x0000000000000000       0x30 Src/main.o
  .debug_macro   0x0000000000000000       0xaf Src/main.o
+ COMMON         0x0000000000000000        0x2 Src/main.o
  .group         0x0000000000000000        0xc Src/stm32f3xx_it.o
  .group         0x0000000000000000        0xc Src/stm32f3xx_it.o
  .group         0x0000000000000000        0xc Src/stm32f3xx_it.o
@@ -825,40 +837,40 @@ LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x000000000000018f       0x22 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000      0xfe1
+.debug_info     0x0000000000000000     0x1075
  .debug_info    0x0000000000000000      0x818 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_info    0x0000000000000818      0x1d5 Src/main.o
- .debug_info    0x00000000000009ed      0x1d2 Src/stm32f3xx_it.o
- .debug_info    0x0000000000000bbf      0x400 Src/system_stm32f3xx.o
- .debug_info    0x0000000000000fbf       0x22 Startup/startup_stm32f303k8tx.o
+ .debug_info    0x0000000000000818      0x269 Src/main.o
+ .debug_info    0x0000000000000a81      0x1d2 Src/stm32f3xx_it.o
+ .debug_info    0x0000000000000c53      0x400 Src/system_stm32f3xx.o
+ .debug_info    0x0000000000001053       0x22 Startup/startup_stm32f303k8tx.o
 
-.debug_abbrev   0x0000000000000000      0x546
+.debug_abbrev   0x0000000000000000      0x59e
  .debug_abbrev  0x0000000000000000      0x266 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_abbrev  0x0000000000000266      0x11a Src/main.o
- .debug_abbrev  0x0000000000000380       0xa3 Src/stm32f3xx_it.o
- .debug_abbrev  0x0000000000000423      0x111 Src/system_stm32f3xx.o
- .debug_abbrev  0x0000000000000534       0x12 Startup/startup_stm32f303k8tx.o
+ .debug_abbrev  0x0000000000000266      0x172 Src/main.o
+ .debug_abbrev  0x00000000000003d8       0xa3 Src/stm32f3xx_it.o
+ .debug_abbrev  0x000000000000047b      0x111 Src/system_stm32f3xx.o
+ .debug_abbrev  0x000000000000058c       0x12 Startup/startup_stm32f303k8tx.o
 
-.debug_aranges  0x0000000000000000      0x1d0
+.debug_aranges  0x0000000000000000      0x1d8
  .debug_aranges
                 0x0000000000000000       0xf0 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_aranges
-                0x00000000000000f0       0x30 Src/main.o
+                0x00000000000000f0       0x38 Src/main.o
  .debug_aranges
-                0x0000000000000120       0x60 Src/stm32f3xx_it.o
+                0x0000000000000128       0x60 Src/stm32f3xx_it.o
  .debug_aranges
-                0x0000000000000180       0x28 Src/system_stm32f3xx.o
+                0x0000000000000188       0x28 Src/system_stm32f3xx.o
  .debug_aranges
-                0x00000000000001a8       0x28 Startup/startup_stm32f303k8tx.o
+                0x00000000000001b0       0x28 Startup/startup_stm32f303k8tx.o
 
-.debug_ranges   0x0000000000000000      0x188
+.debug_ranges   0x0000000000000000      0x190
  .debug_ranges  0x0000000000000000       0xe0 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_ranges  0x00000000000000e0       0x20 Src/main.o
- .debug_ranges  0x0000000000000100       0x50 Src/stm32f3xx_it.o
- .debug_ranges  0x0000000000000150       0x18 Src/system_stm32f3xx.o
- .debug_ranges  0x0000000000000168       0x20 Startup/startup_stm32f303k8tx.o
+ .debug_ranges  0x00000000000000e0       0x28 Src/main.o
+ .debug_ranges  0x0000000000000108       0x50 Src/stm32f3xx_it.o
+ .debug_ranges  0x0000000000000158       0x18 Src/system_stm32f3xx.o
+ .debug_ranges  0x0000000000000170       0x20 Startup/startup_stm32f303k8tx.o
 
-.debug_macro    0x0000000000000000    0x13167
+.debug_macro    0x0000000000000000    0x13192
  .debug_macro   0x0000000000000000      0x14a Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x000000000000014a       0x2f Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x0000000000000179       0x28 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
@@ -877,33 +889,34 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .debug_macro   0x000000000001249a       0x30 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x00000000000124ca      0x2a5 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x000000000001276f       0xaf Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_macro   0x000000000001281e      0x134 Src/main.o
- .debug_macro   0x0000000000012952       0xe5 Src/main.o
- .debug_macro   0x0000000000012a37       0xca Src/main.o
- .debug_macro   0x0000000000012b01       0x28 Src/main.o
- .debug_macro   0x0000000000012b29      0x280 Src/main.o
- .debug_macro   0x0000000000012da9      0x14f Src/main.o
- .debug_macro   0x0000000000012ef8       0x5e Src/main.o
- .debug_macro   0x0000000000012f56      0x135 Src/stm32f3xx_it.o
- .debug_macro   0x000000000001308b       0xdc Src/system_stm32f3xx.o
+ .debug_macro   0x000000000001281e      0x13d Src/main.o
+ .debug_macro   0x000000000001295b       0xe5 Src/main.o
+ .debug_macro   0x0000000000012a40       0xca Src/main.o
+ .debug_macro   0x0000000000012b0a       0x28 Src/main.o
+ .debug_macro   0x0000000000012b32      0x280 Src/main.o
+ .debug_macro   0x0000000000012db2      0x14f Src/main.o
+ .debug_macro   0x0000000000012f01       0x5e Src/main.o
+ .debug_macro   0x0000000000012f5f       0x22 Src/main.o
+ .debug_macro   0x0000000000012f81      0x135 Src/stm32f3xx_it.o
+ .debug_macro   0x00000000000130b6       0xdc Src/system_stm32f3xx.o
 
-.debug_line     0x0000000000000000     0x1812
+.debug_line     0x0000000000000000     0x1866
  .debug_line    0x0000000000000000      0x764 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_line    0x0000000000000764      0x5a1 Src/main.o
- .debug_line    0x0000000000000d05      0x602 Src/stm32f3xx_it.o
- .debug_line    0x0000000000001307      0x48a Src/system_stm32f3xx.o
- .debug_line    0x0000000000001791       0x81 Startup/startup_stm32f303k8tx.o
+ .debug_line    0x0000000000000764      0x5f5 Src/main.o
+ .debug_line    0x0000000000000d59      0x602 Src/stm32f3xx_it.o
+ .debug_line    0x000000000000135b      0x48a Src/system_stm32f3xx.o
+ .debug_line    0x00000000000017e5       0x81 Startup/startup_stm32f303k8tx.o
 
-.debug_str      0x0000000000000000    0x6ac4c
+.debug_str      0x0000000000000000    0x6ace6
  .debug_str     0x0000000000000000    0x6823d Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
                                       0x683ef (size before relaxing)
- .debug_str     0x000000000006823d     0x281e Src/main.o
-                                      0x69d26 (size before relaxing)
- .debug_str     0x000000000006aa5b       0xb8 Src/stm32f3xx_it.o
+ .debug_str     0x000000000006823d     0x28b8 Src/main.o
+                                      0x69dcc (size before relaxing)
+ .debug_str     0x000000000006aaf5       0xb8 Src/stm32f3xx_it.o
                                       0x69983 (size before relaxing)
- .debug_str     0x000000000006ab13      0x108 Src/system_stm32f3xx.o
+ .debug_str     0x000000000006abad      0x108 Src/system_stm32f3xx.o
                                       0x6343d (size before relaxing)
- .debug_str     0x000000000006ac1b       0x31 Startup/startup_stm32f303k8tx.o
+ .debug_str     0x000000000006acb5       0x31 Startup/startup_stm32f303k8tx.o
                                          0x6a (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
@@ -913,9 +926,9 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .comment       0x000000000000007b       0x7c Src/stm32f3xx_it.o
  .comment       0x000000000000007b       0x7c Src/system_stm32f3xx.o
 
-.debug_frame    0x0000000000000000      0x5e4
+.debug_frame    0x0000000000000000      0x60c
  .debug_frame   0x0000000000000000      0x3dc Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
- .debug_frame   0x00000000000003dc       0x74 Src/main.o
- .debug_frame   0x0000000000000450      0x110 Src/stm32f3xx_it.o
- .debug_frame   0x0000000000000560       0x58 Src/system_stm32f3xx.o
- .debug_frame   0x00000000000005b8       0x2c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)
+ .debug_frame   0x00000000000003dc       0x9c Src/main.o
+ .debug_frame   0x0000000000000478      0x110 Src/stm32f3xx_it.o
+ .debug_frame   0x0000000000000588       0x58 Src/system_stm32f3xx.o
+ .debug_frame   0x00000000000005e0       0x2c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.4.0.202007081208/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a(lib_a-init.o)

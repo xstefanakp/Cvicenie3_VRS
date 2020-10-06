@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020004  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00000fe1  00000000  00000000  00020034  2**0
+ 12 .debug_info   00001075  00000000  00000000  00020034  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 00000546  00000000  00000000  00021015  2**0
+ 13 .debug_abbrev 0000059e  00000000  00000000  000210a9  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 000001d0  00000000  00000000  00021560  2**3
+ 14 .debug_aranges 000001d8  00000000  00000000  00021648  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00000188  00000000  00000000  00021730  2**3
+ 15 .debug_ranges 00000190  00000000  00000000  00021820  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  00013167  00000000  00000000  000218b8  2**0
+ 16 .debug_macro  00013192  00000000  00000000  000219b0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00001812  00000000  00000000  00034a1f  2**0
+ 17 .debug_line   00001866  00000000  00000000  00034b42  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    0006ac4c  00000000  00000000  00036231  2**0
+ 18 .debug_str    0006ace6  00000000  00000000  000363a8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000a0e7d  2**0
+ 19 .comment      0000007b  00000000  00000000  000a108e  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000005e4  00000000  00000000  000a0ef8  2**2
+ 20 .debug_frame  0000060c  00000000  00000000  000a110c  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -264,9 +264,9 @@ __STATIC_INLINE void LL_SYSTICK_SetClkSource(uint32_t Source)
  80002b4:	e000e010 	.word	0xe000e010
 
 080002b8 <main>:
-/* Includes ------------------------------------------------------------------*/
-#include "main.h"
-#include "assignment.h"
+previous_state = pin_state;
+
+}
 
 int main(void)
 {
@@ -358,6 +358,8 @@ int main(void)
 
   while (1)
   {
+
+
 	  if(BUTTON_GET_STATE)
  800033a:	4b1c      	ldr	r3, [pc, #112]	; (80003ac <main+0xf4>)
  800033c:	681b      	ldr	r3, [r3, #0]

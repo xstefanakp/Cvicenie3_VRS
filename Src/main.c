@@ -21,7 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "assignment.h"
-
+#include "stdbool.h"
 uint8_t previous_state;
 uint8_t sample_counter=0;
 bool state;
@@ -34,7 +34,7 @@ if(pin_state != previous_state && sample_counter>0){
 	sample_counter=0;
 	return NONE;
 }
-if (pin_state != previous_state && sample_counter=0){
+if (pin_state != previous_state && sample_counter==0){
 
 	state=true;
 }
@@ -42,12 +42,12 @@ if (pin_state != previous_state && sample_counter=0){
 if(pin_state == previous_state && state){
 sample_counter+=1;
 
-	if(sample_counter==samples && previous_state = 0){
+	if(sample_counter==samples && previous_state == 0){
 		state=false;
 		return RISE;
 	}
 
-	if(sample_counter==samples && previous_state = 1){
+	if(sample_counter==samples && previous_state == 1){
 		state=false;
 		return FALL;
 	}
@@ -116,7 +116,6 @@ int main(void)
   while (1)
   {
 
-	  edgeDetect()
 
 	  if(BUTTON_GET_STATE)
 	  {
