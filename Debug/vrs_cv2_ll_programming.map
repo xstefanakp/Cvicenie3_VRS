@@ -894,16 +894,16 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .debug_line    0x0000000000001307      0x48a Src/system_stm32f3xx.o
  .debug_line    0x0000000000001791       0x81 Startup/startup_stm32f303k8tx.o
 
-.debug_str      0x0000000000000000    0x6ac8e
+.debug_str      0x0000000000000000    0x6ac4c
  .debug_str     0x0000000000000000    0x6823d Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
                                       0x683ef (size before relaxing)
- .debug_str     0x000000000006823d     0x2860 Src/main.o
-                                      0x69d68 (size before relaxing)
- .debug_str     0x000000000006aa9d       0xb8 Src/stm32f3xx_it.o
+ .debug_str     0x000000000006823d     0x281e Src/main.o
+                                      0x69d26 (size before relaxing)
+ .debug_str     0x000000000006aa5b       0xb8 Src/stm32f3xx_it.o
                                       0x69983 (size before relaxing)
- .debug_str     0x000000000006ab55      0x108 Src/system_stm32f3xx.o
+ .debug_str     0x000000000006ab13      0x108 Src/system_stm32f3xx.o
                                       0x6343d (size before relaxing)
- .debug_str     0x000000000006ac5d       0x31 Startup/startup_stm32f303k8tx.o
+ .debug_str     0x000000000006ac1b       0x31 Startup/startup_stm32f303k8tx.o
                                          0x6a (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
