@@ -858,7 +858,7 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .debug_ranges  0x0000000000000150       0x18 Src/system_stm32f3xx.o
  .debug_ranges  0x0000000000000168       0x20 Startup/startup_stm32f303k8tx.o
 
-.debug_macro    0x0000000000000000    0x13167
+.debug_macro    0x0000000000000000    0x1316d
  .debug_macro   0x0000000000000000      0x14a Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x000000000000014a       0x2f Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
  .debug_macro   0x0000000000000179       0x28 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
@@ -883,9 +883,9 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .debug_macro   0x0000000000012b01       0x28 Src/main.o
  .debug_macro   0x0000000000012b29      0x280 Src/main.o
  .debug_macro   0x0000000000012da9      0x14f Src/main.o
- .debug_macro   0x0000000000012ef8       0x5e Src/main.o
- .debug_macro   0x0000000000012f56      0x135 Src/stm32f3xx_it.o
- .debug_macro   0x000000000001308b       0xdc Src/system_stm32f3xx.o
+ .debug_macro   0x0000000000012ef8       0x64 Src/main.o
+ .debug_macro   0x0000000000012f5c      0x135 Src/stm32f3xx_it.o
+ .debug_macro   0x0000000000013091       0xdc Src/system_stm32f3xx.o
 
 .debug_line     0x0000000000000000     0x1812
  .debug_line    0x0000000000000000      0x764 Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
@@ -894,16 +894,16 @@ OUTPUT(vrs_cv2_ll_programming.elf elf32-littlearm)
  .debug_line    0x0000000000001307      0x48a Src/system_stm32f3xx.o
  .debug_line    0x0000000000001791       0x81 Startup/startup_stm32f303k8tx.o
 
-.debug_str      0x0000000000000000    0x6ac18
+.debug_str      0x0000000000000000    0x6acc7
  .debug_str     0x0000000000000000    0x6823d Drivers/STM32F3xx_HAL_Driver/Src/stm32f3xx_ll_utils.o
                                       0x683ef (size before relaxing)
- .debug_str     0x000000000006823d     0x27ea Src/main.o
-                                      0x69d2b (size before relaxing)
- .debug_str     0x000000000006aa27       0xb8 Src/stm32f3xx_it.o
+ .debug_str     0x000000000006823d     0x2899 Src/main.o
+                                      0x69da1 (size before relaxing)
+ .debug_str     0x000000000006aad6       0xb8 Src/stm32f3xx_it.o
                                       0x69983 (size before relaxing)
- .debug_str     0x000000000006aadf      0x108 Src/system_stm32f3xx.o
+ .debug_str     0x000000000006ab8e      0x108 Src/system_stm32f3xx.o
                                       0x6343d (size before relaxing)
- .debug_str     0x000000000006abe7       0x31 Startup/startup_stm32f303k8tx.o
+ .debug_str     0x000000000006ac96       0x31 Startup/startup_stm32f303k8tx.o
                                          0x6a (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
