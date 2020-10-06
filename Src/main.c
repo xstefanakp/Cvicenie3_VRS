@@ -28,27 +28,34 @@ bool state;
 
 enum EDGE_TYPE edgeDetect(uint8_t pin_state, uint8_t samples){
 
-if(pin_state != previous_state){
+if(pin_state != previous_state && sample_counter>0){
+
+	state=true;
+	sample_counter=0;
+	return NONE;
+}
+if (pin_state != previous_state && sample_counter=0){
 
 	state=true;
 }
 
 if(pin_state == previous_state && state){
-
 sample_counter+=1;
 
+	if(sample_counter==samples && previous_state = 0){
+		state=false;
+		return RISE;
+	}
+
+	if(sample_counter==samples && previous_state = 1){
+		state=false;
+		return FALL;
+	}
+
 
 }
 
-if(sample_counter==samples && previous_state = 0){
-	return RISE;
-}
 
-if(sample_counter==samples && previous_state = 1){
-	return FALL;
-}
-
-return NONE;
 
 
 previous_state = pin_state;
