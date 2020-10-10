@@ -55,9 +55,6 @@ sample_counter+=1;
 
 }
 
-
-
-
 previous_state = pin_state;
 return NONE;
 }
@@ -117,27 +114,19 @@ int main(void)
   {
 
 
-	  if(BUTTON_GET_STATE)
+	  if(edgeDetect(BUTTON_GET_STATE,5)==RISE)
 	  {
-		  // 0.25s delay
-		  LL_mDelay(250);
-		  LED_ON;
-		  // 0.25s delay
-		  LL_mDelay(250);
-		  LED_OFF;
+		  if(LED_GET_STATE)
+		  {
+			  LED_ON;
+		  }
+		  else
+		  {
+			  LED_OFF;
+		  }
 	  }
-	  else
-	  {
-		  // 1s delay
-		  LL_mDelay(1000);
-		  LED_ON;
-		  // 1s delay
-		  LL_mDelay(1000);
-		  LED_OFF;
-	  }
-  }
 
-}
+  }
 
 /* USER CODE BEGIN 4 */
 
