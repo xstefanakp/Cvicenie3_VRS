@@ -41,10 +41,11 @@
 #define	RCC_AHBENR_REG			*((volatile uint32_t *) (uint32_t)(RCC_BASE_ADDR + 0x00000014U))/* Add ahben register address here. */
 
 /* LED and button macros */
-#define LED_ON					*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x18U))) |= (1 << 4)/* Add LED_ON implementation here. */
-#define LED_OFF					*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x28U))) |= (1 << 4)/* Add LED_OFF implementation here. */
+#define LED_ON					*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x14U))) |= (1 << 4)/* Add LED_ON implementation here. */
+#define LED_OFF					*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x14U))) &= ~(0x3 << 4)/* Add LED_OFF implementation here. */
 
 #define BUTTON_GET_STATE		!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x10U))) & (1 << 3))/* Add BUTTON_GET_STATE implementation here. */
+#define LED_GET_STATE			!(*((volatile uint32_t *)((uint32_t)(0x48000000 + 0x14U))) & (1 << 4))
 
 enum EDGE_TYPE{NONE = 0, RISE = 1, FALL = 2};
 

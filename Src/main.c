@@ -59,7 +59,7 @@ sample_counter+=1;
 
 
 previous_state = pin_state;
-
+return NONE;
 }
 
 int main(void)
