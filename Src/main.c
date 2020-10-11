@@ -125,7 +125,6 @@ int main(void)
 			  LED_OFF;
 		  }
 	  }
-	  LL_mDelay(1000);
   }
 }
 /* USER CODE BEGIN 4 */
