@@ -42,12 +42,12 @@ if (pin_state != previous_state && sample_counter==0){
 if(pin_state == previous_state && state){
 sample_counter+=1;
 
-	if(sample_counter==samples && previous_state == 0){
+	if(sample_counter==samples && previous_state == 1){
 		state=false;
 		return RISE;
 	}
 
-	if(sample_counter==samples && previous_state == 1){
+	if(sample_counter==samples && previous_state == 0){
 		state=false;
 		return FALL;
 	}
@@ -125,9 +125,9 @@ int main(void)
 			  LED_OFF;
 		  }
 	  }
-
+	  LL_mDelay(1000);
   }
-
+}
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
